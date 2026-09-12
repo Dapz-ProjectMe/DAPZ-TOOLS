@@ -1,0 +1,2 @@
+# Guest limit
+The frontend demo counts 3 guest opens with localStorage. This is for testing only. In production, enforce the quota server-side/edge-side because localStorage can be reset. Keep service-role secrets on the server.
