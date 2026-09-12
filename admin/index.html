@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Admin &mdash; DAPZ TOOLS
+  </title>
+  <link href="../assets/css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="topbar">
+   <a class="brand" href="../">
+    DAPZ
+    <span>
+     TOOLS
+    </span>
+   </a>
+   <a class="pill" id="logout">
+    Logout
+   </a>
+  </header>
+  <main class="admin-wrap">
+   <div class="section-head">
+    <div>
+     <p class="eyebrow">
+      CONTROL CENTER
+     </p>
+     <h1>
+      Admin Dashboard
+     </h1>
+    </div>
+    <input id="userSearch" placeholder="Search users..."/>
+   </div>
+   <div class="stats" id="stats">
+   </div>
+   <section class="table-card">
+    <div class="security-note">
+     <b>
+      Security:
+     </b>
+     passwords are handled by Supabase Auth and are never displayed here.
+    </div>
+    <div class="table-scroll">
+     <table>
+      <thead>
+       <tr>
+        <th>
+         Name
+        </th>
+        <th>
+         Email
+        </th>
+        <th>
+         Created
+        </th>
+        <th>
+         Admin
+        </th>
+        <th>
+         Usage
+        </th>
+       </tr>
+      </thead>
+      <tbody id="users">
+      </tbody>
+     </table>
+    </div>
+   </section>
+   <p class="status" id="status">
+   </p>
+  </main>
+  <script src="../assets/js/pages/admin.js" type="module">
+  </script>
+ </body>
+</html>
