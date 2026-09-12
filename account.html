@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Account &mdash; DAPZ TOOLS
+  </title>
+  <link href="assets/css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="topbar">
+   <a class="brand" href="index.html">
+    DAPZ
+    <span>
+     TOOLS
+    </span>
+   </a>
+   <nav>
+    <a href="index.html">
+     Home
+    </a>
+    <a href="index.html#tools">
+     Tools
+    </a>
+   </nav>
+  </header>
+  <main class="account-wrap">
+   <section class="auth-card">
+    <p class="eyebrow">
+     YOUR ACCOUNT
+    </p>
+    <h1>
+     Welcome to DAPZ TOOLS
+    </h1>
+    <p class="muted">
+     Sign in or create an account to continue after the guest limit.
+    </p>
+    <button class="google" id="google">
+     Continue with Google
+    </button>
+    <div class="divider">
+     <span>
+      or
+     </span>
+    </div>
+    <form id="authForm">
+     <input id="name" placeholder="Name (for sign up)"/>
+     <input id="email" placeholder="Email" required="" type="email"/>
+     <input id="password" minlength="6" placeholder="Password" required="" type="password"/>
+     <div class="auth-actions">
+      <button class="secondary" id="signup" type="button">
+       Create account
+      </button>
+      <button class="primary" type="submit">
+       Sign in
+      </button>
+     </div>
+    </form>
+    <p class="status" id="status">
+    </p>
+    <div class="session-box hidden" id="sessionBox">
+    </div>
+   </section>
+  </main>
+  <script src="assets/js/pages/account.js" type="module">
+  </script>
+ </body>
+</html>
