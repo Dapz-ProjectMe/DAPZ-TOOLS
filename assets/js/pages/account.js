@@ -50,12 +50,16 @@ document.querySelector('#signup').addEventListener('click', async () => {
   setStatus('Creating account...');
 
   const { data, error } = await supabase.auth.signUp({
-    email: emailInput.value.trim(),
-    password: passwordInput.value,
-    options: {
-      data: { full_name: nameInput.value.trim() },
+  email: emailInput.value.trim(),
+  password: passwordInput.value,
+  options: {
+    data: {
+      full_name: nameInput.value.trim(),
     },
-  });
+    emailRedirectTo:
+      'https://dapz-projectme.github.io/DAPZ-TOOLS/',
+  },
+});
 
   if (error) {
     setStatus(error.message);
@@ -73,9 +77,12 @@ document.querySelector('#signup').addEventListener('click', async () => {
 
 document.querySelector('#google').addEventListener('click', async () => {
   const { error } = await supabase.auth.signInWithOAuth({
-    provider: 'google',
-    options: { redirectTo: `${window.location.origin}${window.location.pathname}` },
-  });
+  provider: 'google',
+  options: {
+    redirectTo:
+      'https://dapz-projectme.github.io/DAPZ-TOOLS/',
+  },
+});
 
   if (error) setStatus(error.message);
 });
